@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button> 
+        <ion-back-button> </ion-back-button>
+        Criar conta
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding ion-text-center">
+
+  <ion-item>
+    <ion-icon name="create" slot="start"></ion-icon>
+    <ion-input placeholder="Nome Completo" type="text">    </ion-input>
+  </ion-item> <br>
+
+  <ion-item>
+    <ion-icon name="mail" slot="start"></ion-icon>
+    <ion-input placeholder="Email" type="text">    </ion-input>
+  </ion-item> <br>
+
+  <ion-item>
+    <ion-icon name="person" slot="start"></ion-icon>
+    <ion-input placeholder="Usuario" type="text">    </ion-input>
+  </ion-item> <br>
+
+  <ion-item>
+    <ion-icon name="lock-closed" slot="start"></ion-icon>
+    <ion-input placeholder="Senha" type="password">    </ion-input>
+  </ion-item> <br>
+
+  
+
+  
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select>
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Feminino">Feminino</ion-select-option>
+      </ion-select>
+    </ion-item> <br>
+
+
+<ion-button class="" shape="round" color="danger" routerLink="/home">Cadastrar</ion-button>
+
+<div class="cadastrado">
+<p>Ja está cadastrado? <a routerLink="/home" class="link"> Clique aqui</a></p>
+</div>
+
+</ion-content>
