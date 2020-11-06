@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase} from '@angular/fire/database';
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.page.html',
@@ -7,9 +7,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
 })
 export class CreatePage implements OnInit {
  
-  constructor(
-    public db: AngularFireDatabase
-  ) { }
+  constructor() { }
 
   ngOnInit() {
   }
