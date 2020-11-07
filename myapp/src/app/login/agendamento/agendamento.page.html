@@ -26,11 +26,8 @@
     </ion-grid>
    
     <ion-item>
-      <ion-label >Selecionar Data</ion-label>
-      <ion-select>
-        <ion-select-option value="Masculino">Dia 27</ion-select-option>
-        <ion-select-option value="Feminino">Dia 30</ion-select-option>
-      </ion-select>
+      <ion-label color="medium"  > Data</ion-label>
+      <ion-datetime monthValues="10,11,12" yearValues="2020"  displayFormat="DD/MMM/YYYY" [(ngModel)]='newData'></ion-datetime>
     </ion-item> <br>
 
 
@@ -38,21 +35,20 @@
 
 
     <ion-item>
-      <ion-label >Serviço</ion-label>
-      <ion-select>
-        <ion-select-option value="Masculino">Corte Cabelo</ion-select-option>
-        <ion-select-option value="Feminino">Corte Barba</ion-select-option>
+      <ion-label color="medium"  > Insira o serviço</ion-label>
+      <ion-select [(ngModel)]='newService'>
+        <ion-select-option >Corte Cabelo</ion-select-option>
+        <ion-select-option >Corte Barba</ion-select-option>
       </ion-select>
     </ion-item> <br>
 
 
     <ion-item>
-      <ion-label >Horario</ion-label>
-      <ion-select>
-        <ion-select-option value="Masculino">8:00</ion-select-option>
-        <ion-select-option value="Feminino">9:00</ion-select-option>
-      </ion-select>
-    </ion-item> <br>
+      <ion-label color="medium"  > Horario</ion-label>
+      <ion-datetime displayFormat="h:mm a" [(ngModel)]='newHora'></ion-datetime>
+    </ion-item> 
+    
+    <br>
 
 
 
@@ -66,12 +62,21 @@
 
 
 
-    <ion-textarea   placeholder=" Alguma Observação?"></ion-textarea> <br>
+    <ion-textarea   placeholder=" Alguma Observação?" [(ngModel)]='newObs'></ion-textarea> <br>
 
   </ion-card>
 
   <ion-buttons class="ion-justify-content-center">
-    <ion-button color="success" >Cadastrar</ion-button>
+    <ion-button color="success" (click)="add()">Cadastrar</ion-button>
   </ion-buttons>
+
+
+
+  <pre>{{agendamento | json}}</pre>
+  <pre>{{newData | json}}</pre>
+  <pre>{{newService | json}}</pre>
+  <pre>{{newHora| json}}</pre>
+  <pre>{{newObs | json}}</pre>
+
 
 </ion-content>

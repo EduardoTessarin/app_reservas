@@ -12,4 +12,23 @@ export class AgendamentoPage implements OnInit {
   ngOnInit() {
   }
 
-}
+  public newData ='';
+  public newService='';
+  public newHora='';
+  public newObs='';
+
+  public agendamento=[
+    {}
+  ]
+
+
+  add(){
+    const newObjectAgenda ={
+      Nome:'',
+      Data:this.newData,
+      Servico:this.newService,
+      Hora:this.newHora,
+      obs:this.newObs,
+    };
+    this.agendamento.push(newObjectAgenda);
+  }}
