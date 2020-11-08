@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { DadosService } from 'src/app/service/dados.service';
+
+
+
 
 @Component({
   selector: 'app-agendamento',
@@ -7,28 +11,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgendamentoPage implements OnInit {
 
-  constructor() { }
+
+ 
+  public dados = this.Dadosservice.all();
+
+  constructor(private Dadosservice:DadosService) { }
 
   ngOnInit() {
   }
+  
 
+  public newNome='';
   public newData ='';
   public newService='';
   public newHora='';
   public newObs='';
 
-  public agendamento=[
-    {}
-  ]
+ 
 
 
   add(){
     const newObjectAgenda ={
-      Nome:'',
-      Data:this.newData,
-      Servico:this.newService,
-      Hora:this.newHora,
-      obs:this.newObs,
+      id:1,
+      nome:'fernando',
+      data: this.newData,
+      service:this.newService,
+      hora: this.newHora,
+      obs: this.newObs
     };
-    this.agendamento.push(newObjectAgenda);
+
+    this.dados.push(newObjectAgenda);
+    this.newData='';
+    this.newService='';
+    this.newHora='';
+    this.newObs='';
   }}
