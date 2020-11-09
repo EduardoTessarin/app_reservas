@@ -1,7 +1,8 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import{Storage} from '@ionic/storage'
 
-
-export interface dados{
+export interface Dados{
   id:number;
   nome:string;
   data: string;
@@ -10,17 +11,39 @@ export interface dados{
   obs: string;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class DadosService {
 
 
-  private dados: dados[]=[
-    {id: 1 ,nome:'Fernando',data:'10/1/2020',service:'Cortar Cabelo',hora:'10:30',obs:'Teste'}
-  ]
+  private dados: Dados[]=[
+    {id: 1,nome:'Fernando',data:'10/10/10',service:'Corte',hora:'10:30',obs:'Corte longo'}
 
- public all(){
-   return this.dados;
- }
+  ];
+
+
+
+public all(){
+  return this.dados;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 }
