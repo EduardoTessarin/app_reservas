@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DadosService } from 'src/app/service/dados.service';
 
 @Component({
   selector: 'app-conta',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContaPage implements OnInit {
 
-  constructor() { }
+  public dados = this.dadosService.reg();
+
+  constructor( private dadosService: DadosService) { }
 
   ngOnInit() {
   }

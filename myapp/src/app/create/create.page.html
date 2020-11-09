@@ -28,7 +28,7 @@
 
   <ion-item>
     <ion-icon name="lock-closed" slot="start"></ion-icon>
-    <ion-input placeholder="Senha" type="password"[(ngModel)]='senha'>    </ion-input>
+    <ion-input placeholder="Senha" type="password"[(ngModel)]='senha'>{{dados.senha}}    </ion-input>
   </ion-item> <br>
 
   
@@ -50,6 +50,6 @@
 </div>
 
 
-<pre> teste{{dados| json}}</pre>
-<pre> teste{{senha| json}}</pre>
+<pre> {{dados| json}}</pre>
+
 </ion-content>

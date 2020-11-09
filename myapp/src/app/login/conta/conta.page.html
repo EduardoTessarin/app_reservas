@@ -17,7 +17,7 @@
 <ion-card class="margem">
   <ion-item class="margem">
     <ion-label>Email:</ion-label>
-    <ion-input placeholder="teste@hotmail.com"></ion-input>
+    <ion-input placeholder="teste@hotmail.com">{{dados.user}}</ion-input>
   </ion-item> 
 
   <ion-item class="margem">
@@ -45,6 +45,7 @@
     Sair
   </ion-button>
 
-
+  <pre> {{dados| json}}</pre>
+  
 
 </ion-content>

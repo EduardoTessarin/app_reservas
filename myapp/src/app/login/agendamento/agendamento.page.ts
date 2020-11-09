@@ -15,6 +15,7 @@ export class AgendamentoPage implements OnInit {
 
 
   public dados = this.dadosService.all();
+  
   constructor(private storage:Storage,private dadosService:DadosService){
     this.loadData();
   }
