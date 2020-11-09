@@ -11,6 +11,14 @@ export interface Dados{
   obs: string;
 }
 
+export interface register{
+  nome: string;
+  email:string;
+  user:string;
+  senha:string;
+  sexo:string;
+}
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,8 +32,14 @@ export class DadosService {
 
   ];
 
-
-
+  private register: register[]=[
+    {nome:'Fernando',email:'teste01@gmail.com',user:'teste',senha:'1000',sexo:'Masculino'}
+  ];
+//
+public reg(){
+  return this.register;
+}
+//
 public all(){
   return this.dados;
 }
