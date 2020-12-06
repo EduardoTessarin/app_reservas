@@ -44,8 +44,9 @@
 
     <ion-item>
       <ion-label color="medium"  > Horario</ion-label>
-      <ion-datetime displayFormat="h:mm a" [(ngModel)]='newHora'></ion-datetime>
-    </ion-item>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]='newHora'></ion-datetime>
+    </ion-item> 
+    
     <br>
   <div class="agendar">
     <ion-button color=" #02575e" expand="block" (click)="save()">Cadastrar</ion-button>
