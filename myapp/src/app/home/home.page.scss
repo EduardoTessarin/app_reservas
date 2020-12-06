@@ -37,3 +37,27 @@ img{
   
 }
 
+ion-content{
+  --ion-background-color: linear-gradient(#232526,#414345);
+}
+
+ion-item{
+  --ion-background-color: transparent!important;
+}
+h1{
+  margin-top: 147px;
+  position: relative;
+  bottom: 55px;
+  right: 100px;
+  color: white;
+    font-size: 39px;
+}
+.padding{
+  padding: 5%;
+}
+ion-icon{
+  color: white;
+}
+.cadastrado{
+  color: white;
+}

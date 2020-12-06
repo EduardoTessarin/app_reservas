@@ -20,7 +20,15 @@ ion-input{
   ion-card{
       --ion-background-color: #FFFFFF;
   }
+
+  ion-content{
+    --ion-background-color: linear-gradient(#232526,#414345);
+  }
 .margem{
    
     font-family: 'Nunito', sans-serif;
+}
+
+ion-item{
+  --ion-background-color: transparent!important;
 }

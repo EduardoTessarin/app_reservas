@@ -4,4 +4,20 @@
 }
 .cadastrado{
     font-size: 15px;
+    color: white;
 }
+
+ion-content{
+    --ion-background-color: linear-gradient(#232526,#414345);
+  }
+
+  ion-item{
+    --ion-background-color: transparent!important;
+  }
+
+  ion-input{
+      color: white;
+  }
+  ion-icon{
+      color: white;
+  }

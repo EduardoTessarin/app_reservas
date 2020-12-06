@@ -1,9 +1,9 @@
 
   
 
-<ion-content class="ion-padding" color="light">
+<ion-content class="ion-padding" >
 
-<ion-card >
+<ion-card>
   <ion-toolbar color="tertiary"class="ion-text-center">
     <ion-item>
       <ion-avatar slot="start">
@@ -33,7 +33,7 @@
   
   
   <ion-item class="ion-text-center">
-    <ion-label>Tipos de Pagamentos</ion-label>
+    <ion-label>Tipos de Pagamento</ion-label>
   </ion-item>
   
 
@@ -41,5 +41,11 @@
 
 
 
+  <ion-button color="danger" routerLink="/home" expand="block" fill="clear" shape="round">
+    Sair
+  </ion-button>
+
+  <pre> {{dados| json}}</pre>
+  
 
 </ion-content>

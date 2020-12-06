@@ -4,44 +4,51 @@
 
 </ion-header>
 
-<img  src="https://cdn.pixabay.com/photo/2014/08/01/15/51/manhattan-407703_1280.jpg"alt="" shape="round">
-
-<ion-content class="ion-text-center ion-padding" color="light">
 
 
-  <h1>Login</h1> <br>
+<ion-content class="ion-text-center" color="Light">
+  <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Email</ion-label>
+        <ion-input formControlName="email" name="email" type="text" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-icon name="person" slot="start"></ion-icon>
-    <ion-input placeholder="Usuario">    </ion-input>
-  </ion-item>
-  <br>
+      
 
-  <ion-item>
-    <ion-icon name="lock-closed" slot="start"></ion-icon>    
-    <ion-input placeholder="Senha" type="password">    </ion-input>
-  </ion-item> 
-    
-  
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <a class="a" routerLink="/create">Criar Conta</a>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Senha</ion-label>
+        <ion-input formControlName="password" name="password" type="password" [type]="passwordType" clearOnEdit="false"
+          required>
+        </ion-input>
+      </ion-item>
 
-      </ion-col>
-      <ion-col>
-        <a class="a"routerLink="/forgot" size="lg">Esqueceu a senha?</a>
+      <ion-text color="danger">
+        <p [hidden]="submitted == false" class="ion-padding-start">
+          {{this.loginError}}
+        </p>
+      </ion-text>
+    </ion-list>
 
-      </ion-col>
-    </ion-row>
+    <ion-item class="bg-transparent" >
+      <ion-label style="font-size: 15px; font-weight: bold; " class="bg-transparent" color="light">Lembra senha
+      </ion-label>
+      <ion-checkbox  slot="start" formControlName="lastpassword" name="lastpassword"></ion-checkbox>
+    </ion-item>
+
    
-  </ion-grid>
+      
+        <ion-button class="btn-grad animated bounceInLeft fast" [disabled]="!loginForm.valid" type="submit"
+          expand="block">Entrar</ion-button>
 
-
- 
-
-  
-    <ion-button color="danger" shape="round" expand="block" routerLink="/login/home">Login</ion-button>
-
+        <div class="cadastrado">
+          <p class="btn-grad-orange animated bounceInRight fast"
+          routerLink="/create" color="light "> Crie sua conta</p>
+        </div>
+        
+      
+    
+  </form>
  
 </ion-content>

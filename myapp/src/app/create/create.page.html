@@ -9,44 +9,54 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  class="ion-padding ion-text-center">
+<ion-content class="ion-text-center" color="Light">
+  <form [formGroup]="loginForm" (ngSubmit)="onSignup()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Email</ion-label>
+        <ion-input formControlName="email" name="email" type="text" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-icon name="create" slot="start"></ion-icon>
-    <ion-input placeholder="Nome Completo" type="text">    </ion-input>
-  </ion-item> <br>
+      
 
-  <ion-item>
-    <ion-icon name="mail" slot="start"></ion-icon>
-    <ion-input placeholder="Email" type="text">    </ion-input>
-  </ion-item> <br>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Senha</ion-label>
+        <ion-input formControlName="password" name="password" type="password" [type]="passwordType" clearOnEdit="false"
+          required>
+        </ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-icon name="person" slot="start"></ion-icon>
-    <ion-input placeholder="Usuario" type="text">    </ion-input>
-  </ion-item> <br>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Nome</ion-label>
+        <ion-input formControlName="nome" name="nome" type="text" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-icon name="lock-closed" slot="start"></ion-icon>
-    <ion-input placeholder="Senha" type="password">    </ion-input>
-  </ion-item> <br>
+      <ion-item >
+        <ion-label position="stacked" color="primary">Sexo</ion-label>
+        <ion-select formControlName="sexo">
+          <ion-select-option value="Masculino" >Masculino</ion-select-option>
+          <ion-select-option value="Feminino">Feminino</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      
+
+      <ion-text color="danger">
+        <p [hidden]="submitted == false" class="ion-padding-center">
+          {{this.loginError}}
+        </p>
+      </ion-text>
+    </ion-list>
 
   
-
-  
-    <ion-item>
-      <ion-label>Sexo</ion-label>
-      <ion-select>
-        <ion-select-option value="Masculino">Masculino</ion-select-option>
-        <ion-select-option value="Feminino">Feminino</ion-select-option>
-      </ion-select>
-    </ion-item> <br>
-
-
-<ion-button class="" shape="round" color="danger" routerLink="/home">Cadastrar</ion-button>
-
-<div class="cadastrado">
-<p>Ja está cadastrado? <a routerLink="/home" class="link"> Clique aqui</a></p>
-</div>
-
+    
+      <ion-col>
+        <ion-button class="btn-grad-orange animated bounceInRight fast" [disabled]="!loginForm.valid"
+          (click)="onSignup()" expand="block">Registrar</ion-button>
+      </ion-col>
+    
+  </form>
+ 
 </ion-content>
