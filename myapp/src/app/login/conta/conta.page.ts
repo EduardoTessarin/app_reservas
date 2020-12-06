@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { DadosService } from 'src/app/service/dados.service';
-
+import { AuthService} from '../../services/auth.service'
 @Component({
   selector: 'app-conta',
   templateUrl: './conta.page.html',
@@ -14,5 +15,4 @@ export class ContaPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
