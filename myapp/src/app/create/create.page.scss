@@ -1,56 +1,70 @@
 .link{
-    text-decoration: none;
-    color: #3E38F2;
+  text-decoration: none;
+  color: #3E38F2;
 }
 .cadastrado{
-    font-size: 15px;
-    color: white;
+  font-size: 15px;
+  color: white;
 }
 
 .name{
-    margin: 10px;
-    color: black;
-  }
-.password{
-    margin: 10px;
-    color: black;
-  }
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  color: black;
+}
 .email{
-    margin: 10px;
-    color: black;
-  }
+background-color: white;
+border-radius: 20px;
+margin: 10px;
+color: black;
+}
+.password{
+background-color: white;
+border-radius: 20px;
+margin: 10px;
+color: black;
+}
+.email{
+background-color: white;
+border-radius: 20px;
+margin: 10px;
+color: black;
+}
 .gender{
-    color: black;
-  }
-  .form{
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 30px;
-    border-radius: 30px;
-    background-color: #2CBDC2;
-  }
-
-ion-content{
-  --ion-background-color: linear-gradient(#00a2ad,#015C61);
+background-color: white;
+border-radius: 20px;
+color: black;
+}
+.form{
+  margin-top: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #2CBDC2;
 }
 
-  ion-item{
-    --ion-background-color: #2cbdc200;
-  }
+ion-content{
+--ion-background-color: linear-gradient(#00a2ad,#015C61);
+}
 
-  ion-list{
-    --ion-background-color: #2cbdc200;
-  }
+ion-item{
+  --ion-background-color: #2cbdc200;
+}
 
-  ion-input{
-      color: white;
-      text-align: center;
-  }
-  ion-icon{
-      color: white;
-  }
+ion-list{
+  --ion-background-color: #2cbdc200;
+}
 
-  ion-select{
-      margin-left: 100px;
-  }
+ion-input{
+    color: white;
+    text-align: center;
+}
+ion-icon{
+    color: white;
+}
+
+ion-select{
+    margin-left: 55px;
+}

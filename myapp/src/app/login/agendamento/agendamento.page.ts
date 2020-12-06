@@ -33,7 +33,7 @@ public newNome='';
   public save(){
     const newObjectAgenda ={
       id:1,
-      nome:'fernando',
+      nome:this.newNome,
       data: this.newData,
       service:this.newService,
       hora: this.newHora,
@@ -41,13 +41,16 @@ public newNome='';
   }
   this.dados.push(newObjectAgenda);
   this.saveData();
+  this.newNome='';
   this.newData='';
   this.newService='';
   this.newHora='';
   this.newObs='';
   }
 
- 
+ Pegar(){
+   this.save();
+ }
   
 
 //para ele carregar o banco
