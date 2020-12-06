@@ -1,51 +1,18 @@
-
-  
-
 <ion-content class="ion-padding" >
 
-<ion-card>
-  <ion-toolbar color="tertiary"class="ion-text-center">
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://randomuser.me/api/portraits/men/10.jpg">
-      </ion-avatar>
-      <ion-label>Fernando Bruno</ion-label>
-    </ion-item>
-  </ion-toolbar>
-</ion-card> <br>
-
-<ion-card class="margem">
-  <ion-item class="margem">
-    <ion-label>Email:</ion-label>
-    <ion-input placeholder="teste@hotmail.com"></ion-input>
-  </ion-item> 
-
-  <ion-item class="margem">
-    <ion-label>Usuario:</ion-label>
-    <ion-input placeholder="Teste"></ion-input>
-  </ion-item>
-
-  <ion-item class="margem">
-    <ion-label>Sexo:</ion-label>
-    <ion-input placeholder="Masculino"></ion-input>
-  </ion-item>
-
+  <ion-card>
+    <ion-toolbar class="ion-text-center">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg">
+        </ion-avatar>
+        <ion-label>Usuário</ion-label>
+      </ion-item>
+    </ion-toolbar>
+  </ion-card> <br>
   
+    <ion-button color="danger" routerLink="/home" expand="block" fill="clear" shape="round">
+      Sair
+    </ion-button>
   
-  <ion-item class="ion-text-center">
-    <ion-label>Tipos de Pagamento</ion-label>
-  </ion-item>
-  
-
-</ion-card>
-
-
-
-  <ion-button color="danger" routerLink="/home" expand="block" fill="clear" shape="round">
-    Sair
-  </ion-button>
-
-  <pre> {{dados| json}}</pre>
-  
-
-</ion-content>
+  </ion-content>
