@@ -1,13 +1,10 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
-    <ion-title>Agendamento</ion-title>
-  </ion-toolbar>
 </ion-header>
 
 
 
 <ion-content class="ion-no-padding"> 
-
+  <h1>Agendamento</h1>
   <ion-card>
 
     <ion-grid>
@@ -36,10 +33,6 @@
       <ion-datetime monthValues="10,11,12" yearValues="2020"  displayFormat="DD/MMM/YYYY" [(ngModel)]='newData'></ion-datetime>
     </ion-item> <br>
 
-
-
-
-
     <ion-item>
       <ion-label color="medium"  > Insira o serviço</ion-label>
       <ion-select [(ngModel)]='newService'>
@@ -51,35 +44,12 @@
 
     <ion-item>
       <ion-label color="medium"  > Horario</ion-label>
-      <ion-datetime displayFormat="M-YYYY" [(ngModel)]='newHora'></ion-datetime>
-    </ion-item> 
-    
+      <ion-datetime displayFormat="h:mm a" [(ngModel)]='newHora'></ion-datetime>
+    </ion-item>
     <br>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-    <ion-textarea   placeholder=" Alguma Observação?" [(ngModel)]='newObs'></ion-textarea> <br>
+  <div class="agendar">
+    <ion-button color=" #02575e" expand="block" (click)="save()">Cadastrar</ion-button>
+  </div>
 
   </ion-card>
-
-  <ion-buttons class="ion-justify-content-center">
-    <ion-button color="success" (click)="save()">Cadastrar</ion-button>
-  </ion-buttons>
-
-
-
-  <pre> teste{{dados| json}}</pre>
-  <pre> teste{{newNome| json}}</pre>
-  <pre> teste{{newHora| json}}</pre>
-
 </ion-content>

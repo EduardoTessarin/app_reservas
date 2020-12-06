@@ -1,13 +1,41 @@
 ion-Header{
-    --ion-background-color :#0468BF;
-    font-family: 'Merriweather', serif;
-  }
+  --ion-background-color :#0468BF;
+  font-family: 'Merriweather', serif;
+}
 
+ion-content{
+  --ion-background-color: linear-gradient(#EAFEFF,#78cdd0);
+}
+ion-toolbar{
+ --ion-background-color :#0468BF;
+}
 
-  ion-toolbar{
-   --ion-background-color :#0468BF;
-  }
+ion-card{
+  --ion-background-color:white;
+}
 
-  ion-card{
-    --ion-background-color:white;
-  }
+.agendar{
+  width: 200px;
+  margin: auto;
+  padding: 10px;
+}
+
+ion-button{
+  margin: auto;
+  background-color: #02575e;
+  border-radius: 30px;
+}
+ion-item{
+  margin-right: 8px;
+}
+h1{
+  color: black;
+  text-align: center;
+}
+ion-card{
+  --ion-background-color: #FFFFFF;
+  border-radius: 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
