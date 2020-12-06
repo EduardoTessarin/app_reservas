@@ -25,6 +25,12 @@
 
     </ion-grid>
    
+
+    <ion-item>
+      <ion-label color="medium"  > Nome</ion-label>
+      <ion-input [(ngModel)]='newNome'></ion-input> 
+    </ion-item>
+
     <ion-item>
       <ion-label color="medium"  > Data</ion-label>
       <ion-datetime monthValues="10,11,12" yearValues="2020"  displayFormat="DD/MMM/YYYY" [(ngModel)]='newData'></ion-datetime>
@@ -45,7 +51,7 @@
 
     <ion-item>
       <ion-label color="medium"  > Horario</ion-label>
-      <ion-datetime displayFormat="h:mm a" [(ngModel)]='newHora'></ion-datetime>
+      <ion-datetime displayFormat="M-YYYY" [(ngModel)]='newHora'></ion-datetime>
     </ion-item> 
     
     <br>
@@ -73,10 +79,7 @@
 
 
   <pre> teste{{dados| json}}</pre>
-  <pre>{{newData | json}}</pre>
-  <pre>{{newService | json}}</pre>
-  <pre>{{newHora| json}}</pre>
-  <pre>{{newObs | json}}</pre>
-
+  <pre> teste{{newNome| json}}</pre>
+  <pre> teste{{newHora| json}}</pre>
 
 </ion-content>

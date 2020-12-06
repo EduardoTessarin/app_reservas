@@ -1,9 +1,21 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-    <ion-title>calendario</ion-title>
+    <ion-title>Agendamento Anteriores</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+ 
+  <ion-card >
+  <ion-list *ngFor="let d of dados;let i = index" class="esp">
+    <ion-item >
+      Nome: {{d.nome}} <br> <br>
+      Data: {{d.data  | date: 'dd/MM/yyyy HH:mm' }} <br> <br>
+      Serviço: {{d.service}} <br> <br>
+      Horario: {{d.hora}}
+    </ion-item>
+  </ion-list>
+</ion-card>
+<br>
+  
 </ion-content>
