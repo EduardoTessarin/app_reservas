@@ -22,6 +22,12 @@
 
     </ion-grid>
    
+
+    <ion-item>
+      <ion-label color="medium"  > Nome</ion-label>
+      <ion-input [(ngModel)]='newNome'></ion-input> 
+    </ion-item>
+
     <ion-item>
       <ion-label color="medium"  > Data</ion-label>
       <ion-datetime monthValues="10,11,12" yearValues="2020"  displayFormat="DD/MMM/YYYY" [(ngModel)]='newData'></ion-datetime>
