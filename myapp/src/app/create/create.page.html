@@ -3,38 +3,37 @@
 </ion-header>
 
 <ion-content class="ion-text-center" color="Light">
+  <div class="form">
   <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
     <ion-list>
+
       <ion-item>
-        <ion-label position="stacked" color="primary">Email</ion-label>
-        <ion-input formControlName="email" name="email" type="text" spellcheck="false" autocapitalize="off" required>
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input class="name" placeholder="Nome" formControlName="nome" name="nome" type="text" spellcheck="false" autocapitalize="off" required>
         </ion-input>
       </ion-item>
 
-      
+      <ion-item>
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-input class="email" placeholder="Email" formControlName="email" name="email" type="text" spellcheck="false" autocapitalize="off" required>
+        </ion-input>
+      </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" color="primary">Senha</ion-label>
-        <ion-input formControlName="password" name="password" type="password" [type]="passwordType" clearOnEdit="false"
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input class="password" placeholder="Senha" formControlName="password" name="password" type="password" [type]="passwordType" clearOnEdit="false"
           required>
         </ion-input>
       </ion-item>
 
-      <ion-item>
-        <ion-label position="stacked" color="primary">Nome</ion-label>
-        <ion-input formControlName="nome" name="nome" type="text" spellcheck="false" autocapitalize="off" required>
-        </ion-input>
-      </ion-item>
-
       <ion-item >
-        <ion-label position="stacked" color="primary">Sexo</ion-label>
-        <ion-select formControlName="sexo">
+        <ion-icon name="transgender-outline"></ion-icon>
+        <ion-select placeholder="Gênero" class="gender" formControlName="sexo" required>
           <ion-select-option value="Masculino" >Masculino</ion-select-option>
           <ion-select-option value="Feminino">Feminino</ion-select-option>
+          <ion-select-option value="Outros">Outros</ion-select-option>
         </ion-select>
       </ion-item>
-
-      
 
       <ion-text color="danger">
         <p [hidden]="submitted == false" class="ion-padding-center">
@@ -42,14 +41,19 @@
         </p>
       </ion-text>
     </ion-list>
-
   
     
       <ion-col>
         <ion-button class="btn-grad-orange animated bounceInRight fast" [disabled]="!loginForm.valid"
           (click)="onSignup()" expand="block">Registrar</ion-button>
       </ion-col>
+
+      <div class="cadastrado">
+        <p class="btn-grad-orange animated bounceInRight fast"
+        routerLink="/home" color="light "> Já sou cadastrado!</p>
+      </div>
     
   </form>
+</div>
  
 </ion-content>
