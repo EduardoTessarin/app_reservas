@@ -3,10 +3,16 @@
 }
 
 ion-content{
-    --ion-background-color: linear-gradient(#232526,#414345);
+    --ion-background-color: linear-gradient(#EAFEFF,#78cdd0);
   }
-
-
+  h1{
+      color: black;
+      text-align: center;
+  }
   ion-card{
       --ion-background-color: #FFFFFF;
-  } 
+      border-radius: 30px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: black;
+  }
