@@ -27,13 +27,10 @@ export interface register{
 export class DadosService {
 
 
-  private dados: Dados[]=[
-    {id: 1,nome:'Fernando',data:'10/10/10',service:'Corte',hora:'10:30',obs:'Corte longo'}
-
-  ];
+  public dados: Dados[]=[];
 
   private register: register[]=[
-    {nome:'Fernando',email:'teste01@gmail.com',user:'teste',senha:'1000',sexo:'Masculino'}
+    {nome:'',email:'teste01@gmail.com',user:'teste',senha:'1000',sexo:'Masculino'}
   ];
 //
 public reg(){
