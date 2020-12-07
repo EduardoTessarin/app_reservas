@@ -30,7 +30,7 @@
 
     <ion-item>
       <ion-label color="medium"  > Data</ion-label>
-      <ion-datetime monthValues="10,11,12" yearValues="2020"  displayFormat="DD/MMM/YYYY" [(ngModel)]='newData'></ion-datetime>
+      <ion-datetime monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2020,2021"  displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]='newData'></ion-datetime>
     </ion-item> <br>
 
     <ion-item>
@@ -41,12 +41,6 @@
       </ion-select>
     </ion-item> <br>
 
-
-    <ion-item>
-      <ion-label color="medium"  > Horario</ion-label>
-      <ion-datetime displayFormat="HH:mm" [(ngModel)]='newHora'></ion-datetime>
-    </ion-item> 
-    
     <br>
   <div class="agendar">
     <ion-button color=" #02575e" expand="block" (click)="save()">Cadastrar</ion-button>
