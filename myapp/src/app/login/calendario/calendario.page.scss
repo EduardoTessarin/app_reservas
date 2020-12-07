@@ -3,4 +3,22 @@
 }
 ion-card{
     --ion-background-color:white;
+}
+ion-list{
+    margin: 10px;
+    --ion-background-color:white;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+ion-content{
+--ion-background-color: linear-gradient(#EAFEFF,#78cdd0);
+}
+ion-item{
+    margin-top: 10px;
+}
+h1{
+    color: black;
+    text-align: center;
   }
